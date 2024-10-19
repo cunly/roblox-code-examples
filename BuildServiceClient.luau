@@ -27,8 +27,6 @@ local function lerp(a, b, alpha)
 	return a + alpha * (b - a)
 end
 
--- TODO: find a way to prevent build mode from bugging out when mouse isn't on the map
--- TODO: make model non-collidable
 function BuildServiceClient:startBuildMode(model, platform)
 	-- init
 	local modelClone = model:Clone()
