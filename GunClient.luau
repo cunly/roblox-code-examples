@@ -7,6 +7,7 @@ local Link = shared("Link")
 local Maid = shared("Maid")
 local Crosshair = shared("Crosshair")
 local GunControl = shared("GunControl")
+local ParticleUtils = shared("ParticleUtils")
 local AnimationUtils = shared("AnimationUtils")
 local GunFirstPerson = shared("GunFirstPerson")
 local PerspectiveServiceClient = shared("PerspectiveServiceClient")
@@ -52,7 +53,8 @@ end
 
 function GunClient:Shoot(toggle)
 	if toggle == true then
-		print("shoot gun")
+		ParticleUtils.gunShotEffect(self.gun)
+		ReplicatedStorage.Events.RequestShootGun(self.gun)
 	end
 end
 
