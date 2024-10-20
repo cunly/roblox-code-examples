@@ -8,7 +8,7 @@ ModuleRetriever.__index = ModuleRetriever
 
 --[=[
     Binds a metatable to the shared global table which uses the "__call"
-    metamethod to effectively turn it into a function that retrieves modules by name.
+    metamethod to effectively turn it into a function that can retrieve a module by name.
 ]=]
 
 function ModuleRetriever.new()
