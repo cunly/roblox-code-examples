@@ -50,7 +50,7 @@ function ModuleRetriever:callFunctionNoYield(loadedModule, functionName, ...)
 
 	local isDead = coroutine.status(current) == "dead"
 	if not isDead then
-		error(`The "{functionName}" function has yielded while being retrieved.`)
+		error(`A function named "{functionName}" has yielded while being retrieved.`)
 	end
 end
 
